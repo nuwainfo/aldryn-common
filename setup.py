@@ -29,7 +29,7 @@ CLASSIFIERS = [
 ]
 
 setup(
-    name='aldryn-common',
+    name='aldryn-common-Zephyrus5',
     version=__version__,
     description='Common utilities',
     author='Divio AG',
