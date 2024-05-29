@@ -1,7 +1,7 @@
 import datetime
 
 from django.utils.timezone import is_aware, utc
-from django.utils.translation import ugettext, ungettext
+from django.utils.translation import gettext, ungettext
 
 
 def timesince_data(d, now=None, reverse=False):
@@ -62,11 +62,11 @@ def timesince_data_single(d, now=None, reverse=False):
     if r:
         return r[0]
     else:
-        return {'number': 0, 'type': ugettext('minutes')}
+        return {'number': 0, 'type': gettext('minutes')}
 
 
 def timesince_text(d, now=None):
-    return ugettext('%(number)d %(type)s') % timesince_data_single(d, now)[0]
+    return gettext('%(number)d %(type)s') % timesince_data_single(d, now)[0]
 
 
 def timeuntil_data(d, now=None):
@@ -82,4 +82,4 @@ def timeuntil_data_single(d, now=None):
 
 
 def timeuntil_text(d, now=None):
-    return ugettext('%(number)d %(type)s') % timeuntil_data_nonzero(d, now)[0]
+    return gettext('%(number)d %(type)s') % timeuntil_data_nonzero(d, now)[0]
